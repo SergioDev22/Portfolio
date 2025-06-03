@@ -7,7 +7,7 @@ export const AboutSection = () => {
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           A propos
-          <span className="text-primary"> Me</span>
+          <span className="text-primary"> de moi</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 max-md:mx-4">
@@ -22,11 +22,6 @@ export const AboutSection = () => {
               solutions robustes et évolutives, avec une forte capacité à
               travailler sur l'ensemble du cycle de développement logiciel
             </p>
-            {/* <p className="text-muted-foreground">
-              With over 5 years of experience in web development, I specialize
-              in creating responsive, accessible, and performant web application
-              using modern technologies.
-            </p> */}
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               {/* <a href="#contact" className="cosmic-button"> */}
@@ -37,7 +32,6 @@ export const AboutSection = () => {
                 href="https://drive.google.com/file/d/1tBLyFCLqdjn89rRG57HI9B8XkVCXWKEY/view?usp=sharing"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:br-primary/10 transition-colors duration-300"
               >
-                {" "}
                 Télécharger mon CV
               </a>
             </div>

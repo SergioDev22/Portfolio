@@ -1,6 +1,10 @@
+@import "@fontsource/montserrat/400.css";
+@import "@fontsource/montserrat/500.css";
+@import "@fontsource/montserrat/700.css";
+
 @tailwind base;
-@tailwind components;
 @tailwind utilities;
+@tailwind components;
 
 @layer base {
   :root {
@@ -42,8 +46,8 @@
 
   body {
     @apply [background-color:hsl(var(--background))] [color:hsl(var(--foreground))] transition-colors duration-300;
-
     font-feature-settings: "rlig" 1, "calt" 1;
+    font-display: swap;
   }
 
   @keyframes float {
@@ -89,6 +93,22 @@
       transform: rotate(215deg) translateX(-500px);
       opacity: 0;
     }
+  }
+
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  a,
+  div,
+  button {
+    @apply font-sans;
   }
 }
 

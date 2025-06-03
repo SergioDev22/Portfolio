@@ -23,7 +23,6 @@ function Home() {
         <ProjectsSection />
         <Experiences />
         <AwardsSection />
-        {/* <ContactSection /> */}
       </main>
       <footer>
         <Footer />

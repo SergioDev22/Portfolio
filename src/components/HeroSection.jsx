@@ -41,7 +41,7 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-8  left[47%] transform -translate-x-1/2 flex-col items-center animate-bounce rounded-full border p-3">
+      <div className="absolute bottom-8 left-[47%] transform -translate-x-1/2 flex-col items-center animate-bounce rounded-full border p-3">
         <ArrowDown className="h-7 w-7 text-primary max-md:w-4 max-md:h-4" />
       </div>
     </section>

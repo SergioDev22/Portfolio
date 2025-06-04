@@ -1,5 +1,5 @@
-import { motion as Motion } from "framer-motion";
 import { Briefcase, Code } from "lucide-react";
+import { motion as Motion } from "framer-motion";
 
 export const AboutSection = () => {
   return (
@@ -74,26 +74,28 @@ export const AboutSection = () => {
                 </div>
               </div>
             </div> */}
-            <Motion.div
-               initial={{ x: 400, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1 }}
-                viewport={{ once: true }}
-              className="gradient-border p-6 card-hover"
-            >
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Briefcase className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Gestion de projet</h4>
-                  <p className="text-muted-foreground">
-                    Conduite de projets de la conception à la réalisation en
-                    adoptant des méthodologies agiles.
-                  </p>
-                </div>
+            <div>
+              <div className="gradient-border p-6 card-hover">
+                <Motion.div
+                  initial={{ x: 400, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1.5 }}
+                  viewport={{ once: true }}
+                  className="flex items-start gap-4"
+                >
+                  <div className="p-3 rounded-full bg-primary/10">
+                    <Briefcase className="h-6 w-6 text-primary" />
+                  </div>
+                  <div className="text-left">
+                    <h4 className="font-semibold text-lg">Gestion de projet</h4>
+                    <p className="text-muted-foreground">
+                      Conduite de projets de la conception à la réalisation en
+                      adoptant des méthodologies agiles.
+                    </p>
+                  </div>
+                </Motion.div>
               </div>
-            </Motion.div>
+            </div>
           </div>
         </div>
       </div>

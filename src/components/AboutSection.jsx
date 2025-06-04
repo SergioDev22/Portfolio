@@ -1,4 +1,5 @@
-import { Briefcase, Code, User } from "lucide-react";
+import { motion as Motion } from "framer-motion";
+import { Briefcase, Code } from "lucide-react";
 
 export const AboutSection = () => {
   return (
@@ -38,7 +39,13 @@ export const AboutSection = () => {
           </div>
           <div className="grid grid-cols-1 gap-6 max-md:mx-3">
             <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
+              <Motion.div
+                initial={{ x: 400, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
+                className="flex items-start gap-4"
+              >
                 <div className="p-3 rounded-full bg-primary/10">
                   <Code className="h-6 w-6 text-primary" />
                 </div>
@@ -51,7 +58,7 @@ export const AboutSection = () => {
                     des frameworks modernes
                   </p>
                 </div>
-              </div>
+              </Motion.div>
             </div>
             {/* <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
@@ -67,7 +74,13 @@ export const AboutSection = () => {
                 </div>
               </div>
             </div> */}
-            <div className="gradient-border p-6 card-hover">
+            <Motion.div
+               initial={{ x: 400, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
+              className="gradient-border p-6 card-hover"
+            >
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Briefcase className="h-6 w-6 text-primary" />
@@ -80,7 +93,7 @@ export const AboutSection = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </Motion.div>
           </div>
         </div>
       </div>

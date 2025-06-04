@@ -16,7 +16,7 @@ function Home() {
       <StarBackground />
       <Navbar />
 
-      <main>
+      <main className="max-md:mt-15">
         <HeroSection />
         <AboutSection />
         <SkillsSection />

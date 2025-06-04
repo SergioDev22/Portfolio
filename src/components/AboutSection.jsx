@@ -11,10 +11,10 @@ export const AboutSection = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 max-md:mx-4">
-            <h3 className="text-2xl font-semibold">
+            <h3 className="text-2xl font-semibold max-md:ml-3">
               Développeur Web Passionné & Innovateur Technologique
             </h3>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground max-md:ml-3 text-center">
               Développeur Full Stack avec presque 2 ans d'expérience
               professionnel dans la conception et le développement
               d'applications web et Mobile en utilisant React, React-Native,
@@ -30,7 +30,7 @@ export const AboutSection = () => {
               </a> */}
               <a
                 href="https://drive.google.com/file/d/1tBLyFCLqdjn89rRG57HI9B8XkVCXWKEY/view?usp=sharing"
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:br-primary/10 transition-colors duration-300"
+                className="px-6 py-2 rounded-full border border-primary text-primary hover:br-primary/10 hover:scale-x-105 transition duration-300 text-center"
               >
                 Télécharger mon CV
               </a>

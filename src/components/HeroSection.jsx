@@ -8,7 +8,7 @@ export const HeroSection = () => {
     >
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight max-sm:text-2xl">
             <span className="opacity-0 animate-fade-in">Bonjour, Je suis</span>
             <span className="!text-primary opacity-0 animate-fade-in-delay-1">
               {" "}
@@ -20,7 +20,7 @@ export const HeroSection = () => {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-2xl mx-auto opacity-0 animate-fade-in-delay-3">
+          <p className="text-lg md:text-xl max-sm:text-sm text-muted-foreground max-2xl mx-auto opacity-0 animate-fade-in-delay-3">
             Je crée des expériences web remarquables en tirant parti des
             technologies modernes. Spécialisé dans le développement FullStack,
             j'interviens aussi bien sur le front-end, le back-end que sur le
@@ -41,8 +41,8 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="hidden sm:flex absolute bottom-8 left-1/2 transform -translate-x-1/2 flex-col items-center animate-bounce rounded-full border p-3">
-        <ArrowDown className="h-7 w-7 text-primary" />
+      <div className="absolute bottom-8  left[47%] transform -translate-x-1/2 flex-col items-center animate-bounce rounded-full border p-3">
+        <ArrowDown className="h-7 w-7 text-primary max-md:w-4 max-md:h-4" />
       </div>
     </section>
   );

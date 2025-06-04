@@ -1,4 +1,5 @@
 import { Award, Trophy } from "lucide-react";
+import { motion as Motion } from "framer-motion";
 
 const awards = [
   {
@@ -12,7 +13,8 @@ const awards = [
   {
     id: 2,
     title: "Hackathon MNDPT: 1ère place",
-    organizer: "MNDPT (Ministère du Développement Numérique, de la Transformation Digitale, des Postes et des Télécommunications)",
+    organizer:
+      "MNDPT (Ministère du Développement Numérique, de la Transformation Digitale, des Postes et des Télécommunications)",
     date: "Juin 2022",
     place: "1ère",
     icon: <Award className="text-yellow-500" />,
@@ -52,9 +54,13 @@ export const AwardsSection = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {awards.map((award) => (
-            <div
+          {awards.map((award, index) => (
+            <Motion.div
               key={award.id}
+              initial={{ x: 200, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ delay: index * 0.8, duration:1 }}
+              viewport={{ once: true }}
               className="group bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 p-6 border border-border flex flex-col"
             >
               <div className="flex items-start gap-4">
@@ -73,13 +79,17 @@ export const AwardsSection = () => {
                 <span className="inline-block px-3 py-1 bg-accent text-accent-foreground rounded-full text-sm font-medium">
                   {award.date}
                 </span>
-                <span className={`text-lg font-bold ${
-                  award.place === "1ère" ? "text-yellow-500" : "text-amber-400"
-                }`}>
+                <span
+                  className={`text-lg font-bold ${
+                    award.place === "1ère"
+                      ? "text-yellow-500"
+                      : "text-amber-400"
+                  }`}
+                >
                   {award.place} place
                 </span>
               </div>
-            </div>
+            </Motion.div>
           ))}
         </div>
       </div>

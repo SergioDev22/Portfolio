@@ -40,7 +40,7 @@ export const AboutSection = () => {
           <div className="grid grid-cols-1 gap-6 max-md:mx-3">
             <div className="gradient-border p-6 card-hover">
               <Motion.div
-                initial={{ x: 400, opacity: 0 }}
+                initial={{ x: 200, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
@@ -77,7 +77,7 @@ export const AboutSection = () => {
             <div>
               <div className="gradient-border p-6 card-hover">
                 <Motion.div
-                  initial={{ x: 400, opacity: 0 }}
+                  initial={{ x: 200, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ duration: 1.5 }}
                   viewport={{ once: true }}

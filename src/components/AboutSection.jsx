@@ -35,11 +35,11 @@ export const AboutSection = () => {
           <span className="text-primary"> de moi</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 max-md:mx-4">
-            <h3 className="text-2xl font-semibold max-md:ml-3">
+          <div className="space-y-6 text-left max-md:mx-4">
+            <h3 className="text-2xl font-semibold">
               Développeur Full Stack Python / React
             </h3>
-            <p className="text-muted-foreground max-md:ml-3 text-center">
+            <p className="text-muted-foreground text-left">
               Développeur Full Stack Python/React avec plus de 4 ans
               d'expérience professionnelle. Spécialisé dans le développement de
               modules Odoo sur mesure et de pipelines de données sur Google
@@ -49,7 +49,7 @@ export const AboutSection = () => {
               que l'expérience utilisateur.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-start">
               <a
                 href="https://drive.google.com/file/d/17ypnoopXM_NN58hSUpKuDbvPobtCIqMC/view?usp=sharing"
                 target="_blank"

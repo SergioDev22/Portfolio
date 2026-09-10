@@ -1,68 +1,72 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 
 const experiences = [
   {
     id: 1,
-    title: "Consultant Développeur Back-end (Python) & Sys-Admin",
-    entreprise: "Code-Talent",
-    url: "https://code-talent.fr/",
+    title: "Développeur Odoo",
+    entreprise: "ABM INNOV",
+    url: "",
     desc: [
-      "Développer des APIs REST avec Django Rest Framework",
-      "Déployer des applications Next.js, Python sur serveur Linux (systemd, pm2, Nginx)",
-      "Configuration de Google Workspace et mailing",
-      "Scraping",
+      "Conception et développement d'une plateforme de catalogue et de commande de pièces automobiles sous forme de module Odoo : frontend OWL/JavaScript, backend Python, moteur de recherche Elasticsearch",
+      "Intégration des données catalogue TecDoc et des fournisseurs via EDI et API (Golda, TecCom) : vérification de disponibilité, sélection du meilleur prix, routage automatique des commandes",
+      "Développement d'un wizard de contrôle de disponibilité à la confirmation des bons de commande et optimisation des appels API (batching) pour contourner le throttling fournisseur",
+      "Développement d'un module Odoo 18 de facturation électronique B2B connecté à une Plateforme de Dématérialisation Partenaire certifiée Peppol : authentification OAuth 2.1, envoi de factures, suivi du cycle de vie selon les statuts AFNOR, synchronisation par cron",
+      "Création de composants front complexes (recherche par véhicule, filtres pneus, navigation multi-niveaux par catégories et marques)",
     ],
-    date: "Mars 2024 - Déc 2024",
+    date: "Juin 2025 - Aujourd'hui",
+    current: true,
   },
   {
     id: 2,
+    title: "Développeur Python",
+    entreprise: "KOLLEKTIV IT",
+    url: "",
+    desc: [
+      "Conception et développement de pipelines de données en Python (extraction, transformation, chargement) pour l'ingestion et le traitement de données à grande échelle",
+      "Déploiement et gestion des pipelines sur Google Cloud Platform : orchestration, planification des traitements et supervision des exécutions",
+    ],
+    date: "Mars 2026 - Aujourd'hui",
+    current: true,
+  },
+  {
+    id: 3,
     title: "Développeur React / Python",
     entreprise: "DIRIS",
     url: "https://diris.fr/",
     desc: [
-      "Création d'APIs avec Django et FastAPI",
-      "Création de sites web avec React, Redux, Tanstack Query et Material UI",
-      "Formation sur l'IA, notamment sur les LLM (Large Language Models)",
+      "Conception et développement d'APIs REST avec Django et FastAPI pour alimenter les applications web",
+      "Développement d'interfaces web avec React, Redux Toolkit, Tanstack Query et Material UI, avec gestion du cache et des états asynchrones",
+      "Développement des fonctionnalités de gestion de portefeuille utilisateurs en Web3 (suivi des actifs, intégration blockchain)",
+      "Participation aux revues de code et à la maintenance évolutive de la plateforme",
     ],
-    date: "Novembre 2023 - ...",
+    date: "Novembre 2023 - Décembre 2025",
   },
   {
-    id: 3,
+    id: 4,
+    title: "Consultant Développeur Back-end (Python) & Sys-Admin",
+    entreprise: "Code-Talent",
+    url: "https://code-talent.fr/",
+    desc: [
+      "Développement d'APIs REST avec Django REST Framework",
+      "Déploiement et maintenance d'applications Next.js et Python sur serveurs Linux : services systemd, pm2, reverse proxy nginx, certificats SSL",
+      "Configuration de Google Workspace et mise en place de la messagerie professionnelle (domaines, DNS, comptes utilisateurs)",
+      "Développement de scripts de scraping pour la collecte et la structuration de données web",
+    ],
+    date: "Mars 2024 - Décembre 2024",
+  },
+  {
+    id: 5,
     title: "Alternant Développeur et Data Manipulation",
     entreprise: "SMARTONE",
     url: "https://smartone.ai/",
     desc: [
-      "Création de modules de connexion à plusieurs bases de données avec Python",
-      "Développeur Front-end en ReactJS",
-      "Création de scripts ETL (Extract, Transform, Load) pour traitement de données sur AWS",
-      "Scraping",
-      "Création d'APIs REST avec FastAPI",
-      "Développement d'APIs avec Django Rest Framework & Node/Express",
-      "Déploiement et maintenance d'applications sur serveurs Ubuntu avec Nginx",
+      "Développement d'un module Python de connexion unifié à plusieurs types de bases de données",
+      "Conception de scripts ETL (Extract, Transform, Load) pour le traitement de données stockées sur AWS",
+      "Développement d'APIs REST avec FastAPI",
+      "Développement front-end en ReactJS",
+      "Scraping et collecte de données pour alimenter les pipelines de traitement",
     ],
     date: "Décembre 2022 - Novembre 2023",
-  },
-  {
-    id: 4,
-    title: "Développeur Front-end ReactJS",
-    entreprise: "HOAG-TARGET",
-    url: "https://hoag-target.com/",
-    desc: [
-      "Alternant Développeur et Sys-Admin",
-      "Développement en React / React-Native / Python",
-    ],
-    date: "Janvier 2022 - Novembre 2022",
-  },
-  {
-    id: 5,
-    title: "Développeur Python",
-    entreprise: "ITEAM-S COMMUNITY",
-    url: "",
-    desc: [
-      "Création de Bot Messenger",
-      "Développement d'APIs avec Django Rest Framework et FastAPI",
-    ],
-    date: "Mars 2021 - ...",
   },
 ];
 
@@ -113,9 +117,15 @@ export const Experiences = () => {
                 </div>
 
                 <div className="md:text-right">
-                  <span className="inline-block px-3 py-1 bg-accent text-accent-foreground rounded-full text-sm font-medium">
+                  <span className="inline-block px-3 py-1 bg-accent text-accent-foreground rounded-full text-sm font-medium whitespace-nowrap">
                     {exp.date}
                   </span>
+                  {exp.current && (
+                    <span className="mt-2 md:justify-end flex items-center gap-2 text-xs font-medium text-primary">
+                      <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
+                      En poste
+                    </span>
+                  )}
                 </div>
               </div>
             </div>

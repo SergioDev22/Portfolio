@@ -1,124 +1,206 @@
 import { useState } from "react";
 import { cn } from "../Lib/utils";
 
+const devicon = (path) =>
+  `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${path}.svg`;
+
 const skills = [
+  // Langages
   {
-    name: "HTML/CSS",
+    name: "Python",
     level: 95,
-    category: "frontend",
-    logo: "https://www.w3.org/html/logo/downloads/HTML5_Badge.svg",
+    category: "backend",
+    logo: devicon("python/python-original"),
   },
   {
     name: "JavaScript",
     level: 90,
     category: "frontend",
-    logo: "https://worldvectorlogo.com/logos/javascript-1.svg",
-  },
-  {
-    name: "React",
-    level: 90,
-    category: "frontend",
-    logo: "https://worldvectorlogo.com/logos/react-2.svg",
+    logo: devicon("javascript/javascript-original"),
   },
   {
     name: "TypeScript",
     level: 85,
     category: "frontend",
-    logo: "https://worldvectorlogo.com/logos/typescript.svg",
+    logo: devicon("typescript/typescript-original"),
   },
   {
-    name: "Tailwind CSS",
+    name: "SQL",
+    level: 85,
+    category: "data",
+    logo: devicon("azuresqldatabase/azuresqldatabase-original"),
+  },
+
+  // Odoo & back-end
+  {
+    name: "Odoo (OWL, ORM)",
+    level: 90,
+    category: "backend",
+    logo: "https://cdn.simpleicons.org/odoo/714B67",
+  },
+  {
+    name: "Django / DRF",
+    level: 90,
+    category: "backend",
+    logo: devicon("django/django-plain"),
+  },
+  {
+    name: "FastAPI",
+    level: 85,
+    category: "backend",
+    logo: devicon("fastapi/fastapi-original"),
+  },
+  {
+    name: "Flask",
+    level: 80,
+    category: "backend",
+    logo: devicon("flask/flask-original"),
+  },
+
+  // Front-end
+  {
+    name: "ReactJS",
     level: 90,
     category: "frontend",
-    logo: "https://worldvectorlogo.com/logos/tailwind-css-2.svg",
-  },
-  {
-    name: "Next.js",
-    level: 70,
-    category: "frontend",
-    logo: "https://worldvectorlogo.com/logos/nextjs-2.svg",
+    logo: devicon("react/react-original"),
   },
   {
     name: "React Native",
     level: 70,
     category: "frontend",
-    logo: "https://worldvectorlogo.com/logos/react-native-1.svg",
+    logo: devicon("react/react-original"),
+  },
+  {
+    name: "Next.js",
+    level: 75,
+    category: "frontend",
+    logo: devicon("nextjs/nextjs-original"),
+  },
+  {
+    name: "Redux Toolkit",
+    level: 85,
+    category: "frontend",
+    logo: devicon("redux/redux-original"),
+  },
+  {
+    name: "Tanstack Query",
+    level: 85,
+    category: "frontend",
+    logo: "https://cdn.simpleicons.org/reactquery/FF4154",
   },
   {
     name: "Material UI",
-    level: 95,
+    level: 90,
     category: "frontend",
-    logo: "https://worldvectorlogo.com/logos/material-ui-1.svg",
+    logo: devicon("materialui/materialui-original"),
   },
   {
     name: "ShadCN",
-    level: 95,
+    level: 85,
     category: "frontend",
-    logo: "https://avatars.githubusercontent.com/u/139895814?s=48&v=4",
+    logo: "https://cdn.simpleicons.org/shadcnui/888888",
   },
   {
-    name: "Node.js",
+    name: "Tailwind CSS",
+    level: 90,
+    category: "frontend",
+    logo: devicon("tailwindcss/tailwindcss-original"),
+  },
+
+  // Data & intégrations
+  {
+    name: "Pipelines ETL",
+    level: 85,
+    category: "data",
+    logo: devicon("apacheairflow/apacheairflow-original"),
+  },
+  {
+    name: "Elasticsearch",
     level: 80,
-    category: "backend",
-    logo: "https://worldvectorlogo.com/logos/nodejs-icon.svg",
+    category: "data",
+    logo: devicon("elasticsearch/elasticsearch-original"),
   },
   {
-    name: "Express",
-    level: 75,
-    category: "backend",
-    logo: "https://worldvectorlogo.com/logos/express-109.svg",
+    name: "APIs REST / EDI",
+    level: 90,
+    category: "data",
+    logo: devicon("swagger/swagger-original"),
   },
   {
-    name: "MongoDB",
-    level: 70,
-    category: "backend",
-    logo: "https://worldvectorlogo.com/logos/mongodb-icon-1.svg",
+    name: "OAuth 2.1",
+    level: 80,
+    category: "data",
+    logo: devicon("oauth/oauth-original"),
   },
+  {
+    name: "Scraping",
+    level: 85,
+    category: "data",
+    logo: devicon("selenium/selenium-original"),
+  },
+
+  // Bases de données
   {
     name: "PostgreSQL",
-    level: 65,
-    category: "backend",
-    logo: "https://worldvectorlogo.com/logos/postgresql.svg",
+    level: 85,
+    category: "data",
+    logo: devicon("postgresql/postgresql-original"),
   },
   {
-    name: "Django Rest Framework",
-    level: 90,
-    category: "backend",
-    logo: "https://worldvectorlogo.com/logos/django.svg",
+    name: "MySQL",
+    level: 80,
+    category: "data",
+    logo: devicon("mysql/mysql-original"),
+  },
+
+  // Cloud & DevOps
+  {
+    name: "Google Cloud Platform",
+    level: 80,
+    category: "cloud",
+    logo: devicon("googlecloud/googlecloud-original"),
   },
   {
-    name: "Flask",
-    level: 90,
-    category: "backend",
-    logo: "https://worldvectorlogo.com/logos/flask.svg",
-  },
-  {
-    name: "FastAPI",
+    name: "AWS",
     level: 70,
-    category: "backend",
-    logo: "https://worldvectorlogo.com/logos/fastapi.svg",
+    category: "cloud",
+    logo: devicon("amazonwebservices/amazonwebservices-original-wordmark"),
+  },
+  {
+    name: "Linux (Ubuntu)",
+    level: 85,
+    category: "cloud",
+    logo: devicon("ubuntu/ubuntu-plain"),
+  },
+  {
+    name: "nginx",
+    level: 80,
+    category: "cloud",
+    logo: devicon("nginx/nginx-original"),
+  },
+  {
+    name: "systemd / pm2",
+    level: 80,
+    category: "cloud",
+    logo: devicon("linux/linux-original"),
   },
   {
     name: "Git/GitHub",
     level: 90,
-    category: "tools",
-    logo: "https://worldvectorlogo.com/logos/github-icon-1.svg",
-  },
-  {
-    name: "Docker",
-    level: 50,
-    category: "tools",
-    logo: "https://worldvectorlogo.com/logos/docker.svg",
-  },
-  {
-    name: "VS Code",
-    level: 95,
-    category: "tools",
-    logo: "https://worldvectorlogo.com/logos/visual-studio-code-1.svg",
+    category: "cloud",
+    logo: devicon("git/git-original"),
   },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = ["all", "frontend", "backend", "data", "cloud"];
+
+const categoryLabels = {
+  all: "Toutes",
+  frontend: "Front-end",
+  backend: "Back-end",
+  data: "Data & bases de données",
+  cloud: "Cloud & DevOps",
+};
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -139,13 +221,13 @@ export const SkillsSection = () => {
               onClick={() => setActiveCategory(category)}
               key={category}
               className={cn(
-                "px-5 py-2 rounded-full transition-all duration-300 capitalize text-sm md:text-base",
+                "px-5 py-2 rounded-full transition-all duration-300 text-sm md:text-base",
                 activeCategory === category
                   ? "bg-primary text-primary-foreground shadow-md"
                   : "bg-secondary/70 text-foreground hover:bg-secondary/90 hover:shadow-sm"
               )}
             >
-              {category === "all" ? "Toutes" : category}
+              {categoryLabels[category]}
             </button>
           ))}
         </div>
@@ -158,22 +240,23 @@ export const SkillsSection = () => {
             >
               <div className="flex items-center gap-4 mb-4">
                 {skill.logo && (
-                  <div className="w-12 h-12 flex items-center justify-center bg-background rounded-lg p-2">
+                  <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-background rounded-lg p-2">
                     <img
                       src={skill.logo}
                       alt={skill.name}
+                      loading="lazy"
                       className="w-8 h-8 object-contain"
                       onError={(e) => {
-                        // Fallback si l'image ne charge pas
-                        e.currentTarget.src = "/skills/default.svg";
+                        // Masque l'icône si le CDN ne répond pas
+                        e.currentTarget.style.visibility = "hidden";
                       }}
                     />
                   </div>
                 )}
                 <div>
                   <h3 className="font-semibold text-lg">{skill.name}</h3>
-                  <span className="text-sm text-muted-foreground capitalize">
-                    {skill.category}
+                  <span className="text-sm text-muted-foreground">
+                    {categoryLabels[skill.category]}
                   </span>
                 </div>
               </div>

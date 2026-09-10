@@ -1,13 +1,4 @@
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  Phone,
-  Send,
-  Twitch,
-  Twitter,
-} from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 import { cn } from "../Lib/utils";
 import { useToast } from "./hooks/use-toast";
@@ -21,8 +12,8 @@ export const ContactSection = () => {
     setIsSubmitting(true);
     setTimeout(() => {
       toast({
-        title: "Message sent!",
-        description: "Thank you for you message. I'll get back to you soon. ",
+        title: "Message envoyé !",
+        description: "Merci pour votre message. Je vous réponds très vite.",
       });
       setIsSubmitting(false);
     }, 1500);
@@ -33,18 +24,18 @@ export const ContactSection = () => {
       {" "}
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md-3xl md:text-4xl font-bold mb-4 text-center">
-          Get In <span className="text-primary"> Touch</span>
+          Me <span className="text-primary"> Contacter</span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Have a project in mind or want to collaborate? Fell to reach out. I'm
-          always open to discussing new opportunities.
+          Un projet en tête ou une envie de collaborer ? N'hésitez pas à
+          m'écrire. Je suis toujours ouvert à de nouvelles opportunités.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <h3 className="text-2xl font-semibold mb-6">
               {" "}
-              Contact Information
+              Mes coordonnées
             </h3>
 
             <div className="space-y-6 justify-center">
@@ -55,10 +46,10 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium"> Email</h4>
                   <a
-                    href="mailto:rabemangasoatanjonanasa@gmail.com"
+                    href="mailto:sergio.dev22@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    rabemangasoatanjonanasa@gmail.com
+                    sergio.dev22@gmail.com
                   </a>
                 </div>
               </div>
@@ -68,61 +59,66 @@ export const ContactSection = () => {
                   <Phone className="h-6 w-6 text-primary" />{" "}
                 </div>
                 <div>
-                  <h4 className="font-medium"> Phone</h4>
+                  <h4 className="font-medium"> Téléphone</h4>
                   <a
-                    href="tel:+261344328140"
+                    href="tel:+261345789245"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    +261 34 43 281 40
+                    +261 34 57 892 45
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />{" "}
+                  <MapPin className="h-6 w-6 text-primary" />{" "}
                 </div>
                 <div>
-                  <h4 className="font-medium"> Location</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Ambohimanandray, Antananarive, Madagascar
-                  </a>
+                  <h4 className="font-medium"> Localisation</h4>
+                  <span className="text-muted-foreground">
+                    Ambomiadana Ampitatafika, Antananarivo, Madagascar
+                  </span>
                 </div>
               </div>
             </div>
             <div className="pt-8">
-              <h4 className="font-medium mb-4">Connect With Me</h4>
+              <h4 className="font-medium mb-4">Retrouvez-moi</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="#" target="_blank">
+                <a
+                  href="https://github.com/SergioDev22"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="text-foreground/80 hover:text-primary transition-colors"
+                >
+                  <Github />
+                </a>
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="text-foreground/80 hover:text-primary transition-colors"
+                >
                   <Linkedin />
-                </a>
-                <a href="#" target="_blank">
-                  <Twitter />
-                </a>
-                <a href="#" target="_blank">
-                  <Instagram />
-                </a>
-                <a href="#" target="_blank">
-                  <Facebook />
                 </a>
               </div>
             </div>
           </div>
 
-          <div
-            className="bg-card p-8 rounded-lg shadow-xs"
-            onSubmit={handleSubmit}
-          >
-            <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
+          <div className="bg-card p-8 rounded-lg shadow-xs">
+            <h3 className="text-2xl font-semibold mb-6">
+              Envoyer un message
+            </h3>
 
-            <form action="" className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
                   className="block text-sm font-medium mb-2"
                 >
                   {" "}
-                  Your Name
+                  Votre nom
                 </label>
                 <input
                   type="text"
@@ -130,7 +126,7 @@ export const ContactSection = () => {
                   name="name"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outlind-hidden focus:ring-2 focus:ring-primary"
-                  placeholder="Tanjona Nasandratra..."
+                  placeholder="Votre nom..."
                 />
               </div>
 
@@ -140,7 +136,7 @@ export const ContactSection = () => {
                   className="block text-sm font-medium mb-2"
                 >
                   {" "}
-                  Your Email
+                  Votre email
                 </label>
                 <input
                   type="email"
@@ -148,7 +144,7 @@ export const ContactSection = () => {
                   name="email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outlind-hidden focus:ring-2 focus:ring-primary"
-                  placeholder="rabemangasoatanjonanasa@gmail.com"
+                  placeholder="vous@exemple.com"
                 />
               </div>
 
@@ -158,23 +154,25 @@ export const ContactSection = () => {
                   className="block text-sm font-medium mb-2"
                 >
                   {" "}
-                  Your Message
+                  Votre message
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outlind-hidden focus:ring-2 focus:ring-primary resize:none"
-                  placeholder="Hello, I'd like to talk about..."
+                  placeholder="Bonjour, j'aimerais échanger à propos de..."
                 />
               </div>
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
+                  "cosmic-button w-full flex items-center justify-center gap-2",
+                  isSubmitting && "opacity-70 cursor-not-allowed"
                 )}
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
                 <Send size={16} />
               </button>
             </form>

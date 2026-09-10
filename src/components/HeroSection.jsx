@@ -21,15 +21,12 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl max-sm:text-sm text-muted-foreground max-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Je crée des expériences web remarquables en tirant parti des
-            technologies modernes. Spécialisé dans le développement FullStack,
-            j'interviens aussi bien sur le front-end, le back-end que sur le
-            développement mobile. Mon objectif est de concevoir des interfaces
-            intuitives, esthétiques et performantes, tout en garantissant une
-            architecture robuste, sécurisée et évolutive côté serveur. Grâce à
-            ma maîtrise des outils et frameworks actuels, je suis capable de
-            concevoir des applications complètes, de l'idée à la mise en
-            production.
+            Développeur Full Stack Python/React avec plus de 4 ans
+            d'expérience. Je conçois des modules Odoo sur mesure et des
+            pipelines de données sur Google Cloud Platform, du backend jusqu'au
+            déploiement. Des APIs REST robustes aux interfaces React
+            performantes, j'interviens sur toute la chaîne pour livrer des
+            applications complètes, de l'idée à la mise en production.
           </p>
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a

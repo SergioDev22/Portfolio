@@ -3,6 +3,7 @@ import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { ThemeContext } from "../utils/context";
 import { AwardsSection } from "../components/Award";
+import { Formation } from "../components/Formation";
 import { Experiences } from "../components/Experiences";
 import { ThemeToggle } from "../components/ThemeToogle";
 import { HeroSection } from "../components/HeroSection";
@@ -28,6 +29,7 @@ function Home() {
         <SkillsSection />
         <ProjectsSection />
         <Experiences />
+        <Formation />
         <AwardsSection />
       </main>
       <footer>

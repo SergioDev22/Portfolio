@@ -4,7 +4,7 @@ import { motion as Motion } from "framer-motion";
 const awards = [
   {
     id: 1,
-    title: "Laureat HUI : 2ème place",
+    title: "Lauréat HUI : 2ème place",
     organizer: "TechZara",
     date: "Avril 2022",
     place: "2ème",
@@ -21,7 +21,7 @@ const awards = [
   },
   {
     id: 3,
-    title: "HACKATHON DEVFEST : 1er PLACE",
+    title: "Hackathon DevFest : 1ère place",
     organizer: "Association DevFest Antananarivo",
     date: "Novembre 2022",
     place: "1ère",
